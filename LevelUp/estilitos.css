@@ -1,0 +1,141 @@
+/*@font-face {
+  font-family: "Bebas Neue";
+    src: url("./Fuentes/BebasNeue-Regular.ttf") TENGO QUE DESCARGARLA Y CALLATE VISUAL;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Fuentes/NoSéPeroParaLosPárrafos.ttf");
+}*/
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f33535;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul {
+  font-family: "Bebas Neue";
+  font-size: 48px;
+}
+
+/*algo:hover {
+  color: #f33535;
+}
+
+boton:hover {
+  background-color: #f33535;
+   color: #fff;
+}
+
+.boton {
+  background-color: #fff;
+  border-color: #fff;
+  color: #f33535;
+  font-weight: bold;
+  //Revisar font-size: 24px;
+  cursor: pointer;
+  padding: 0px //Revisar 40px;
+}
+
+.boton:hover {
+  background-color: #f33535;
+  color: #fff;
+  border-color: transparent;
+}
+*/
+
+nav li {
+  padding: 0%;
+  display: inline-block;
+}
+
+.títulosSección {
+  font-size: 60px;
+}
+
+.títulosArtículos {
+  font-size: 40px;
+}
+
+.títulosArtículos:hover {
+  color: #f33535;
+}
+
+article {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+section {
+  padding-top: 120px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.carrusel img:hover {
+  transition: 0.5s;
+  scale: 1.1;
+}
+
+.contenedor {
+  display: flex;
+  gap: 20px;
+  padding: 80px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.títuloCarrusel {
+  color: #fff;
+}
+
+ul.carrusel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
+
+ul.carrusel li {
+  margin-right: 20px;
+  scroll-snap-align: start;
+}
+
+.fondoCarrusel {
+  background-image: url("./Imgs/Top_Juegos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background-image: url("./Imgs/Textura_Footer_Mobile.png");
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
