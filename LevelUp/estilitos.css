@@ -1,0 +1,289 @@
+/*@font-face {
+  font-family: "Bebas Neue";
+    src: url("./Fuentes/BebasNeue-Regular.ttf") TENGO QUE DESCARGARLA Y CALLATE VISUAL;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Fuentes/NoSéPeroParaLosPárrafos.ttf");
+}*/
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*===== Barra de Navegacion =====*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6B0400;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+#logo {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 160px;
+  object-fit: cover;
+  width: 20px;
+  height: 70px;
+}
+
+nav a {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul {
+  font-family: "Bebas Neue";
+  font-size: 48px;
+}
+
+nav li {
+  font-size: 35px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/*algo:hover {
+  color: #f33535;
+}
+
+boton:hover {
+  background-color: #f33535;
+   color: #fff;
+}
+
+.boton {
+  background-color: #fff;
+  border-color: #fff;
+  color: #f33535;
+  font-weight: bold;
+  //Revisar font-size: 24px;
+  cursor: pointer;
+  padding: 0px //Revisar 40px;
+}
+
+.boton:hover {
+  background-color: #f33535;
+  color: #fff;
+  border-color: transparent;
+}
+*/
+
+/*===== PERFIL LOGIN =====*/
+
+/*===== SECCION NOTICIAS =====*/
+.títulosSección {
+  font-size: 60px;
+}
+
+.títulosArtículos {
+  font-size: 40px;
+}
+
+.títulosArtículos:hover {
+  color: #f33535;
+}
+
+#noticias {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: auto;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.títulosSección {
+  grid-column: 1 / 3;
+  margin-bottom: 20px;
+}
+
+/* Artículo grande - columna 1, filas 2 en adelante */
+.principal {
+  grid-column: 1 / 2;
+  grid-row: 2 / span 3; /* Empieza en fila 2 y ocupa 3 filas */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.principal img {
+  align-items: center;
+  margin-left: auto;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.principal h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.principal p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Artículos chicos - columna 2 */
+section article:not(.principal) {
+  grid-column: 2 / 3;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: -50px;
+}
+
+section article:not(.principal) img {
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+section article:not(.principal) h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+section article:not(.principal) p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+article {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 24px;
+}
+
+/*===== CARRUSEL =====*/
+.carrusel img:hover {
+  transition: 0.5s;
+  scale: 1.1;
+}
+.títuloCarrusel {
+  color: #fff;
+}
+ul.carrusel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
+ul.carrusel li {
+  margin-right: 20px;
+  scroll-snap-align: start;
+}
+.fondoCarrusel {
+  background-image: url("./Imgs/Top_Juegos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.carrusel-pos {
+  color: white;
+}
+.carrusel-nom {
+  color: white;
+  text-align: center;
+}
+
+/*===== SECCION REVIEWS =====*/
+
+#review-card {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#review-card img {
+  width: 50%;
+  height: 20%;
+  object-fit: cover;
+  flex-shrink: 0; /* Evita que la imagen se encoja */
+  border-radius: 6px;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenido h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.contenido h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 400;
+  color: #555;
+}
+
+.contenido p {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.btn-review {
+  display: inline-block;
+  background: #d90429; /* Rojo */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 70%;
+  height: 20%;
+  margin-top: 10px;
+  margin-left: 45px;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.btn-review:hover {
+  background: #a0031f; /* Rojo más oscuro al pasar el mouse */
+}
+
+/*===== SECCION NOTICIAS DESTACADOS =====*/
+
+/*===== SECCION ARTICULOS =====*/
+
+/*===== PODRIA INTERESARTE =====*/
+
+/*===== PIE DE PAGINA =====*/
+
+footer {
+  background-image: url("./Imgs/Textura_Footer_Mobile.png");
+  color: #fff;
+  text-align: left;
+  padding: 40px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
