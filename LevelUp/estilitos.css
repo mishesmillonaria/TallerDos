@@ -11,12 +11,17 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+.header-espaciado {
+  padding: 90px;
 }
 
 img {
@@ -91,13 +96,12 @@ nav li {
   transition: 0.3s;
 }
 
-
-
 .navegacion {
   width: 60px;
   height: 60px;
   margin-top: 45px;
   margin-bottom: 45px;
+  filter: invert(100%);
 }
 
 /*algo:hover {
@@ -388,6 +392,15 @@ ul.carrusel li {
   margin: 0;
 }
 
+/*===== Sección de juegos. =====*/
+
+.juegos-populares {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
 /*===== PIE DE PÁGINA =====*/
 
 footer {
@@ -415,18 +428,18 @@ html {
     border-top: 1px solid #ddd;
     z-index: 100;
   }
-  #logo { 
-    order: 1; 
+  #logo {
+    order: 1;
     width: 30px;
     height: 30px;
     margin-top: 45px;
   }
-  .navegacion { 
+  .navegacion {
     order: 3;
     width: 30px;
-    height: 30px; 
+    height: 30px;
   }
-  #perfil-login { 
+  #perfil-login {
     order: 4;
   }
   .perfil-img {
@@ -460,5 +473,5 @@ html {
   }
   #menu-toggle:checked ~ .hamburguesa span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
-  }  
+  }
 }
