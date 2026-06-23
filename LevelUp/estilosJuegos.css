@@ -91,16 +91,42 @@ nav li {
 .navegacion {
   width: 60px;
   height: 60px;
-  margin-top: 45px;
+  margin-top: -10px;
   margin-bottom: 45px;
   filter: invert(100%);
 }
+
+/*algo:hover {
+  color: #f33535;
+}
+
+boton:hover {
+  background-color: #f33535;
+   color: #fff;
+}
+
+.boton {
+  background-color: #fff;
+  border-color: #fff;
+  color: #f33535;
+  font-weight: bold;
+  //Revisar font-size: 24px;
+  cursor: pointer;
+  padding: 0px //Revisar 40px;
+}
+
+.boton:hover {
+  background-color: #f33535;
+  color: #fff;
+  border-color: transparent;
+}
+*/
 
 /*===== PERFIL LOGIN =====*/
 .perfil-img {
   height: 60px;
   width: 60px;
-  margin-top: 45px;
+  margin-top: 35px;
   margin-bottom: 45px;
 }
 
