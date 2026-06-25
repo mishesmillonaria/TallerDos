@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header-espaciado {
+  padding: 90px;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+/*===== Barra de Navegacion =====*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6b0400;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul {
+  font-family: "Bebas Neue";
+  font-size: 48px;
+}
+
+nav li {
+  font-size: 35px;
+  margin-right: 10px;
+  margin-top: 45px;
+  display: inline-block;
+}
+
+#logo {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 160px;
+  object-fit: cover;
+  width: 70px;
+  height: 50px;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ocultar checkbox y hamburguesa en desktop */
+#menu-toggle,
+.hamburguesa {
+  display: none;
+}
+
+.hamburguesa {
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.navegacion {
+  width: 60px;
+  height: 60px;
+  margin-top: -10px;
+  margin-bottom: 45px;
+  filter: invert(100%);
+}
+
+.naveg-texto {
+  display: none;
+}
+
+/*algo:hover {
+  color: #f33535;
+}
+
+boton:hover {
+  background-color: #f33535;
+   color: #fff;
+}
+
+.boton {
+  background-color: #fff;
+  border-color: #fff;
+  color: #f33535;
+  font-weight: bold;
+  //Revisar font-size: 24px;
+  cursor: pointer;
+  padding: 0px //Revisar 40px;
+}
+
+.boton:hover {
+  background-color: #f33535;
+  color: #fff;
+  border-color: transparent;
+}
+*/
+
+/*===== PERFIL LOGIN =====*/
+.perfil-img {
+  height: 60px;
+  width: 60px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+/*===== SECCION REVIEWS 3x3 =====*/
+.Reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 30px; /* Espacio entre cards */
+  padding: 50px;
+  max-width: 1200px;
+  margin: 55 auto;
+}
+
+.Reviews .tituloSeccion {
+  grid-column: 1 / -1; /* De la columna 1 a la última */
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Cada artículo es una card */
+.Reviews article {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.Reviews article:hover {
+  transform: translateY(-5px);
+}
+
+.Reviews .img-Review {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.Reviews .tituloArticulo {
+  font-size: 40px;
+  margin: 15px;
+}
+
+.Reviews .tituloArticulo:hover {
+  color: #f33535;
+}
+
+.Reviews .texto-Articulo {
+  font-size: 16px;
+  margin: 0 15px 15px 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/*===== PIE DE PÁGINA =====*/
+
+footer {
+  background-image: url("./Imgs/Textura_Footer_Mobile.png");
+  color: #fff;
+  text-align: left;
+  padding: 40px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.cargarNoticias {
+  display: none;
+}
+
+/* Responsive para 412px x 932px */
+@media (max-width: 412px) {
+  /*NAV MOBILE*/
+  nav {
+    height: 80px;
+  }
+  .menu-nav {
+    position: absolute;
+    top: 100%;
+    left: 85px;
+    right: 0;
+    background: #000000;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    border-top: 1px solid #ddd;
+    z-index: 100;
+    width: 80%;
+  }
+  #logo {
+    order: 1;
+    width: 30px;
+    height: 50px;
+    margin-top: 15px;
+  }
+  .navegacion {
+    order: 3;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 60px;
+    margin-top: -55px;
+    filter: invert(100%);
+  }
+  .naveg-texto {
+    font-family: "Bebas Neue";
+    display: block;
+    font-size: 40px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+  }
+  #perfil-login {
+    order: 4;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+  .perfil-img {
+    width: 30px;
+    height: 30px;
+    margin-top: auto;
+    margin-left: 15px;
+  }
+  .menu-nav li a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburguesa {
+    display: flex;
+    order: 4;
+    margin-top: 30px;
+    color: #fff;
+  }
+  nav:has(#menu-toggle:checked) .menu-nav {
+    display: flex;
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(2) {
+    opacity: 0;
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* seccion reviews mobile */
+
+  .Reviews {
+    grid-template-columns: 1fr; /* 1 columna en mobile */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .Reviews .tituloSeccion {
+    font-size: 36px;
+  }
+
+  .Reviews .tituloArticulo {
+    font-size: 28px;
+  }
+
+  .Reviews .img-Review {
+    height: 180px;
+  }
+}
