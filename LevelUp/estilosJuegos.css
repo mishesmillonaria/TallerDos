@@ -96,8 +96,15 @@ nav li {
   filter: invert(100%);
 }
 
+<<<<<<< Updated upstream
 .naveg-texto {
   display: none;
+=======
+.boton:hover {
+  background-color: #f33535;
+  color: #fff;
+  border-color: transparent;
+>>>>>>> Stashed changes
 }
 
 /*===== PERFIL LOGIN =====*/
@@ -109,6 +116,7 @@ nav li {
 }
 
 /*===== CARRUSEL =====*/
+
 .carrusel img:hover {
   transition: 0.5s;
   border: 4px solid #f33535;
@@ -143,6 +151,7 @@ ul.carrusel li {
   color: white;
   text-align: center;
 }
+
 /*===== Sección de juegos. =====*/
 
 .juegos-populares {
@@ -179,6 +188,7 @@ footer {
   text-align: left;
   padding: 40px;
 }
+<<<<<<< Updated upstream
 
 @media (max-width: 412px) {
   /*NAV MOBILE*/
@@ -258,3 +268,5 @@ footer {
     transform: rotate(-45deg) translate(7px, -7px);
   }
 }
+=======
+>>>>>>> Stashed changes
