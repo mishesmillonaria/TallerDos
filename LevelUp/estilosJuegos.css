@@ -98,14 +98,11 @@ nav li {
 
 .naveg-texto {
   display: none;
-<<<<<<< Updated upstream
-=======
 }
 .boton:hover {
   background-color: #f33535;
   color: #fff;
   border-color: transparent;
->>>>>>> Stashed changes
 }
 
 /*Borré esos cosos raros.*/
@@ -276,8 +273,4 @@ footer {
   nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
   }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
