@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 
+/*Tuve un conflicto con los archivos,
+espero que no explote nada.*/
+
 html,
 body {
   width: 100%;
@@ -255,6 +258,20 @@ iframe {
   color: #e74c3c;
 }
 
+.reaction i:hover {
+  cursor: pointer;
+}
+
+/*Tenés que cambiar los regular por los solid.
+Lo dejé a mano y escrito en el index nada más para tenerlo.
+Creo que sí o sí vamos a necesitar JavaScript,
+o sino la grande nunca será Cuca.*/
+
+/*
+ <i class="fa-solid fa-thumbs-down"></i>
+  <i class="fa-solid fa-thumbs-up"></i>
+} */
+
 .reaction span {
   font-size: 14px;
 }
@@ -398,6 +415,9 @@ iframe {
   display: flex;
   gap: 25px;
 }
+
+/* Odio el inglés. Ahora quiero ponerle tildes
+y comas a todo. */
 
 .comment-actions a {
   color: #e74c3c;
