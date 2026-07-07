@@ -12,7 +12,7 @@ body {
 }
 
 .header-espaciado {
-  padding: 90px;
+  padding: 64px;
 }
 
 img {
@@ -98,32 +98,6 @@ nav li {
 .naveg-texto {
   display: none;
 }
-
-/*algo:hover {
-  color: #f33535;
-}
-
-boton:hover {
-  background-color: #f33535;
-   color: #fff;
-}
-
-.boton {
-  background-color: #fff;
-  border-color: #fff;
-  color: #f33535;
-  font-weight: bold;
-  //Revisar font-size: 24px;
-  cursor: pointer;
-  padding: 0px //Revisar 40px;
-}
-
-.boton:hover {
-  background-color: #f33535;
-  color: #fff;
-  border-color: transparent;
-}
-*/
 
 .títulosSección {
   font-size: 60px;
@@ -224,6 +198,7 @@ boton:hover {
   font-size: 1.8rem;
   margin: 0;
   line-height: 1.2;
+  color: black;
 }
 
 .contenido h2 {
@@ -264,13 +239,19 @@ boton:hover {
   width: 50%;
   height: 50px;
   display: inline-block;
-  background: white; /* Rojo */
-  color: #d90429;
-  border-color: #d90429;
+  background: white;
+  color: #f33535;
+  border-color: #f33535;
   padding: 12px 24px;
-  margin-left: 330px;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.cargarNoticias:hover {
+  background: #f33535;
+  color: white;
+  cursor: pointer;
+  border-color: transparent;
 }
 
 /*===== PIE DE PÁGINA =====*/

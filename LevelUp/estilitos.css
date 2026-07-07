@@ -23,7 +23,7 @@ a {
   text-decoration: none;
 }
 .header-espaciado {
-  padding: 90px;
+  padding: 64px;
 }
 
 img {
@@ -278,6 +278,7 @@ ul.carrusel li {
 }
 
 .contenido h1 {
+  color: black;
   font-size: 1.8rem;
   margin: 0;
   line-height: 1.2;
@@ -332,7 +333,7 @@ ul.carrusel li {
   margin-left: 65px;
 }
 
-/*===== PODRIA INTERESARTE =====*/
+/*===== PODRÍA INTERESARTE =====*/
 
 .podria-interesarte {
   display: grid;
@@ -390,7 +391,7 @@ html {
 }
 
 .cargarNoticias {
-  width: 100%;
+  width: 50%;
   height: 50px;
   display: inline-block;
   background: white;
