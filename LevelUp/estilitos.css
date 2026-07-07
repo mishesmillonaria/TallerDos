@@ -110,32 +110,6 @@ nav li {
   display: none;
 }
 
-/*algo:hover {
-  color: #f33535;
-}
-
-boton:hover {
-  background-color: #f33535;
-   color: #fff;
-}
-
-.boton {
-  background-color: #fff;
-  border-color: #fff;
-  color: #f33535;
-  font-weight: bold;
-  //Revisar font-size: 24px;
-  cursor: pointer;
-  padding: 0px //Revisar 40px;
-}
-
-.boton:hover {
-  background-color: #f33535;
-  color: #fff;
-  border-color: transparent;
-}
-*/
-
 /*===== PERFIL LOGIN =====*/
 .perfil-img {
   height: 60px;
@@ -307,6 +281,10 @@ ul.carrusel li {
   font-size: 1.8rem;
   margin: 0;
   line-height: 1.2;
+}
+
+.contenido h1:hover {
+  color: #f33535;
 }
 
 .contenido h2 {
