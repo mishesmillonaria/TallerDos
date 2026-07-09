@@ -178,8 +178,6 @@ nav li {
 .artículoChikitito {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  margin-left: 0px;
 }
 
 /*
