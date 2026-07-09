@@ -192,6 +192,26 @@ ul.carrusel li {
 
  =====*/
 
+.cargarNoticias {
+  width: 60%;
+  height: 50px;
+  display: inline-block;
+  background: white;
+  color: #f33535;
+  border-color: #f33535;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 270px;
+}
+
+.cargarNoticias:hover {
+  background: #f33535;
+  color: white;
+  cursor: pointer;
+  border-color: transparent;
+}
+
 /*===== PIE DE PÁGINA =====*/
 
 footer {
