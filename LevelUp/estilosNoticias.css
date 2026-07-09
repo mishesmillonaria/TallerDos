@@ -167,6 +167,47 @@ nav li {
   margin: 0;
 }
 
+/* ----- VALORACIÓN ----- */
+
+.rating-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-top: 28px;
+  gap: 80px;
+}
+
+.reaction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reaction i {
+  font-size: 20px;
+  color: black;
+}
+
+.reaction span {
+  font-size: 14px;
+}
+
+/* ----- Versión chiquita, ya la arreglé. ----- */
+
+.reacciónChiquita {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 12px;
+  gap: 28px;
+}
+
+.reacciónChiquita span {
+  font-size: 14px;
+}
+
 /*===== SECCIÓN NOTICIAS =====*/
 .noticias {
   margin: 60px;
@@ -213,6 +254,10 @@ nav li {
   margin: 0;
   color: #333;
   line-height: 1.5;
+}
+
+.contenido h1:hover {
+  color: #f33535;
 }
 
 .btn-review {

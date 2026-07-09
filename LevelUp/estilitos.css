@@ -377,6 +377,59 @@ ul.carrusel li {
   margin: 0;
 }
 
+/* ----- VALORACIÓN ----- */
+
+.rating {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.rating h3 {
+  margin-bottom: 25px;
+  margin-left: -280px;
+  font-size: 20px;
+}
+
+.rating-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-top: 28px;
+  gap: 80px;
+}
+
+.reaction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reaction i {
+  font-size: 24px;
+  color: black;
+}
+
+.reaction span {
+  font-size: 14px;
+}
+
+/* ----- Versión chiquita. ----- */
+
+.reacciónChiquita {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-top: 12px;
+  gap: 28px;
+}
+
+.reacciónChiquita span {
+  font-size: 14px;
+}
+
 /*===== PIE DE PÁGINA =====*/
 
 footer {
