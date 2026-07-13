@@ -1,0 +1,1236 @@
+/*@font-face {
+  font-family: "Bebas Neue";
+    src: url("./Fuentes/BebasNeue-Regular.ttf") TENGO QUE DESCARGARLA Y CALLATE VISUAL;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Fuentes/NoSéPeroParaLosPárrafos.ttf");
+}*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.header-espaciado {
+  padding: 64px;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+/*===== Barra de Navegacion =====*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6b0400;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul {
+  font-family: "Bebas Neue";
+  font-size: 48px;
+}
+
+nav li {
+  font-size: 35px;
+  margin-right: 10px;
+  margin-top: 45px;
+  display: inline-block;
+}
+
+#logo {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 160px;
+  object-fit: cover;
+  width: 70px;
+  height: 50px;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ocultar checkbox y hamburguesa en desktop */
+#menu-toggle,
+.hamburguesa {
+  display: none;
+}
+
+.hamburguesa {
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.navegacion {
+  width: 60px;
+  height: 60px;
+  margin-top: -10px;
+  margin-bottom: 45px;
+  filter: invert(100%);
+}
+
+.naveg-texto {
+  display: none;
+}
+
+/*===== PERFIL LOGIN =====*/
+.perfil-img {
+  height: 60px;
+  width: 60px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+/* Fondo oscuro detrás */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja blanca del login */
+.modal-contenido {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-contenido h2 {
+  margin: 0;
+  text-align: left;
+  color: #6b0400;
+}
+
+.modal-contenido label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.modal-contenido input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-submit {
+  background: #d90429;
+  color: white;
+  width: 340px;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background: #a0031f;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.registro-texto {
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
+}
+.registro-texto a {
+  color: #d90429;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/*===== SECCIÓN NOTICIAS =====*/
+.títulosSección {
+  font-size: 60px;
+}
+
+.títulosArtículos {
+  font-size: 40px;
+}
+
+.títulosArtículos:hover {
+  color: #f33535;
+}
+
+#noticias {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.títulosSección {
+  grid-column: 1 / 3;
+  margin-bottom: 20px;
+}
+
+/* Artículo grande - columna 1, filas 2 en adelante */
+.principal {
+  grid-column: 1 / 2;
+  grid-row: 2 / span 3; /* Empieza en fila 2 y ocupa 3 filas */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 600px;
+}
+
+.principal img {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.principal h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.principal p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Artículos chicos - columna 2 */
+.secundario {
+  grid-column: 2;
+  display: flex;
+  gap: 15px;
+  margin-bottom: -29px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+.secundario img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.secundario .títulosArtículos {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.secundario p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.secundario .texto {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+article {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 24px;
+}
+
+/*===== CARRUSEL =====*/
+.carrusel img:hover {
+  transition: 0.5s;
+  border: 4px solid #f33535;
+  scale: 1.1;
+}
+.títuloCarrusel {
+  color: #fff;
+  text-align: left;
+  margin-left: 100px;
+}
+ul.carrusel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
+ul.carrusel li {
+  margin-right: 20px;
+  scroll-snap-align: start;
+}
+.fondoCarrusel {
+  background-image: url("./Imgs/Top_Juegos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.carrusel-pos {
+  color: white;
+}
+.carrusel-nom {
+  color: white;
+  text-align: center;
+}
+
+/*===== SECCIÓN REVIEWS =====*/
+
+#review-card {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+#review-card img {
+  width: 50%;
+  height: 20%;
+  object-fit: cover;
+  flex-shrink: 0; /* Evita que la imagen se encoja */
+  /*Del flex-shrink no sabía, gracias.*/
+  border-radius: 6px;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenido h1 {
+  color: black;
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.contenido h1:hover {
+  color: #f33535;
+}
+
+.contenido h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 400;
+  color: #555;
+}
+
+.contenido p {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.btn-review {
+  display: inline-block;
+  background: #d90429; /* Rojo */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 70%;
+  height: 20%;
+  margin-top: 10px;
+  margin-left: 45px;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.btn-review:hover {
+  background: #a0031f; /* Rojo más oscuro al pasar el mouse */
+}
+
+/*===== SECCION NOTICIAS DESTACADOS =====*/
+
+/*===== SECCION ARTÍCULOS =====*/
+
+/*===== SECCION VIDEOS =====*/
+.video-img {
+  width: 90%;
+  height: 70%;
+  margin-left: 65px;
+}
+
+/*===== PODRÍA INTERESARTE =====*/
+
+.podria-interesarte {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.podria-interesarte article {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 20px;
+  margin-left: 0px;
+}
+
+.imgs-podria-interesarte {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.podria-interesarte .texto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.podria-interesarte .títulosArtículos {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.podria-interesarte p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ----- VALORACIÓN ----- */
+
+.rating {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.rating h3 {
+  margin-bottom: 25px;
+  margin-left: -280px;
+  font-size: 20px;
+}
+
+.rating-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-top: 28px;
+  gap: 80px;
+}
+
+.reaction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reaction i {
+  font-size: 24px;
+  color: black;
+}
+
+.reaction span {
+  font-size: 14px;
+}
+
+/* ----- Versión chiquita. ----- */
+
+.reacciónChiquita {
+  font-size: 16px;
+  display: flex;
+  margin-top: 12px;
+  gap: 28px;
+}
+
+.reacciónChiquita span {
+  font-size: 14px;
+}
+
+.botoncito_Rata {
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 4px;
+  width: 28px;
+  height: 28px;
+}
+
+/*===== PIE DE PÁGINA =====*/
+
+footer {
+  background-image: url("./Imgs/Textura_Footer_Mobile.png");
+  color: #fff;
+  text-align: left;
+  padding: 40px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cargarNoticias {
+  width: 60%;
+  height: 50px;
+  display: inline-block;
+  background: white;
+  color: #f33535;
+  border-color: #f33535;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 270px;
+}
+
+.cargarNoticias:hover {
+  background: #f33535;
+  color: white;
+  cursor: pointer;
+  border-color: transparent;
+}
+
+/* Responsive para 412px x 932px */
+@media (max-width: 412px) {
+  /*NAV MOBILE*/
+  nav {
+    height: 80px;
+  }
+  .menu-nav {
+    position: absolute;
+    top: 100%;
+    left: 85px;
+    right: 0;
+    background: #000000;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    border-top: 1px solid #ddd;
+    z-index: 100;
+    width: 80%;
+  }
+  #logo {
+    order: 1;
+    width: 30px;
+    height: 50px;
+    margin-top: 15px;
+  }
+  .navegacion {
+    order: 3;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 60px;
+    margin-top: -55px;
+    filter: invert(100%);
+  }
+  .naveg-texto {
+    font-family: "Bebas Neue";
+    display: block;
+    font-size: 40px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+  }
+  #perfil-login {
+    order: 4;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+  .perfil-img {
+    width: 30px;
+    height: 30px;
+    margin-top: auto;
+    margin-left: 15px;
+  }
+  .menu-nav li a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburguesa {
+    display: flex;
+    order: 4;
+    margin-top: 30px;
+    color: #fff;
+  }
+  nav:has(#menu-toggle:checked) .menu-nav {
+    display: flex;
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(2) {
+    opacity: 0;
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  /*===== SECCION NOTICIAS =====*/
+  .títulosSección {
+    font-size: 35px;
+    margin-left: 30px;
+  }
+
+  .títulosArtículos {
+    font-size: 40px;
+  }
+
+  .títulosArtículos:hover {
+    color: #f33535;
+  }
+  /* seccion noticias */
+
+  #noticias {
+    padding-top: 120px;
+    display: grid;
+    gap: 20px;
+    max-width: 400px;
+    grid-template-columns: 0fr 0fr;
+    grid-auto-rows: auto;
+    margin-bottom: auto;
+  }
+
+  .títulosSección {
+    grid-column: 1 / 3;
+    margin-bottom: 20px;
+  }
+
+  .principal {
+    grid-column: 2 / 2;
+    grid-row: 2 / span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    height: 310px;
+    margin-left: 30px;
+  }
+
+  .principal img {
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    object-fit: contain;
+  }
+
+  .principal h2 {
+    font-size: 15px;
+    line-height: 1.3;
+    width: 300px;
+  }
+
+  .principal p {
+    font-size: 0.9rem;
+    color: #666;
+    width: 300px;
+  }
+
+  /* Artículos chicos - columna 2 */
+  .secundario {
+    grid-column: 2;
+    display: flex;
+    gap: 15px;
+    margin-bottom: -29px;
+    margin-top: 20px;
+    width: 320px;
+    height: 120px;
+    align-items: flex-start;
+  }
+
+  .secundario img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .secundario .títulosArtículos {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .secundario p {
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .secundario .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  article {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  /*===== CARRUSEL =====*/
+  .carrusel img:hover {
+    transition: 0.5s;
+    border: 4px solid #f33535;
+    scale: 1.1;
+  }
+  .img-carrusel {
+    width: 210px;
+    height: 310px;
+  }
+  .títuloCarrusel {
+    color: #fff;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  ul.carrusel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+    scrollbar-width: none;
+    list-style: none;
+  }
+  ul.carrusel li {
+    margin-right: 20px;
+    scroll-snap-align: start;
+  }
+  .fondoCarrusel {
+    background-image: url("./Imgs/Top_Juegos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .carrusel-pos {
+    color: white;
+    font-size: 25px;
+  }
+  .carrusel-nom {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  /*===== review mobioñe =====*/
+
+  #review-card {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px;
+    border-radius: 8px;
+  }
+
+  #review-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+    /*Del flex-shrink no sabía, gracias.*/
+    border-radius: 6px;
+  }
+
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .contenido h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .contenido h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 400;
+    color: #555;
+  }
+
+  .contenido p {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .btn-review {
+    display: inline-block;
+    background: #d90429; /* Rojo */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    width: auto;
+    height: 2auto;
+    margin-top: 10px;
+    margin-left: 0px;
+    transition: background 0.2s;
+    text-align: center;
+    align-self: flex-start;
+  }
+
+  .btn-review:hover {
+    background: #a0031f; /* Rojo más oscuro al pasar el mouse */
+  }
+
+  /* seccion videos */
+
+  .video-img {
+    width: 350px;
+    height: 200px;
+    margin-left: 30px;
+  }
+
+  /*===== PODRIA INTERESARTE =====*/
+
+  .podria-interesarte {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .podria-interesarte article {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 0px;
+  }
+
+  .podria-interesarte article img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 6px;
+  }
+
+  .podria-interesarte .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .podria-interesarte .títulosArtículos {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .podria-interesarte p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+  }
+
+  .cargarNoticias {
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    background: white; /* Rojo */
+    color: #d90429;
+    border-color: #d90429;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .títulosArtículos {
+    font-size: 40px;
+  }
+
+  .títulosArtículos:hover {
+    color: #f33535;
+  }
+  /* seccion noticias */
+
+  #noticias {
+    padding-top: 120px;
+    display: grid;
+    gap: 20px;
+    max-width: 400px;
+    grid-template-columns: 0fr 0fr;
+    grid-auto-rows: auto;
+    margin-bottom: auto;
+  }
+
+  .títulosSección {
+    grid-column: 1 / 3;
+    margin-bottom: 20px;
+  }
+
+  .principal {
+    grid-column: 2 / 2;
+    grid-row: 2 / span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    height: 540px;
+    margin-left: 30px;
+  }
+  .despar {
+    display: none;
+  }
+
+  .principal img {
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    object-fit: contain;
+  }
+
+  .principal h2 {
+    font-size: 15px;
+    line-height: 1.3;
+    width: 300px;
+  }
+
+  .principal p {
+    font-size: 0.9rem;
+    color: #666;
+    width: 300px;
+  }
+
+  /* Artículos chicos - columna 2 */
+  .secundario {
+    grid-column: 2;
+    display: flex;
+    gap: 15px;
+    margin-bottom: -10px;
+    margin-top: 20px;
+    width: 320px;
+    height: 120px;
+    align-items: flex-start;
+  }
+  .reacciónChiquita {
+    font-size: 16px;
+    display: flex;
+    margin-top: 12px;
+    gap: 28px;
+  }
+
+  .secundario img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .secundario .títulosArtículos {
+    font-size: 15px;
+    height: auto;
+    width: 225px;
+    margin: 0;
+  }
+
+  .secundario p {
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+  }
+
+  .secundario .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  article {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  /*===== CARRUSEL =====*/
+  .carrusel img:hover {
+    transition: 0.5s;
+    border: 4px solid #f33535;
+    scale: 1.1;
+  }
+  .img-carrusel {
+    width: 210px;
+    height: 310px;
+  }
+  .títuloCarrusel {
+    color: #fff;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  ul.carrusel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+    scrollbar-width: none;
+    list-style: none;
+  }
+  ul.carrusel li {
+    margin-right: 20px;
+    scroll-snap-align: start;
+  }
+  .fondoCarrusel {
+    background-image: url("./Imgs/Top_Juegos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .carrusel-pos {
+    color: white;
+    font-size: 25px;
+  }
+  .carrusel-nom {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  /*===== review mobioñe =====*/
+
+  #review-card {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px;
+    border-radius: 8px;
+  }
+
+  #review-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+    /*Del flex-shrink no sabía, gracias.*/
+    border-radius: 6px;
+  }
+
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .contenido h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .contenido h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 400;
+    color: #555;
+  }
+
+  .contenido p {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .btn-review {
+    display: inline-block;
+    background: #d90429; /* Rojo */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    width: auto;
+    height: 2auto;
+    margin-top: 10px;
+    margin-left: 0px;
+    transition: background 0.2s;
+    text-align: center;
+    align-self: flex-start;
+  }
+
+  .btn-review:hover {
+    background: #a0031f; /* Rojo más oscuro al pasar el mouse */
+  }
+
+  /* seccion videos */
+
+  .video-img {
+    width: 350px;
+    height: 200px;
+    margin-left: 30px;
+  }
+
+  /*===== PODRIA INTERESARTE =====*/
+
+  .podria-interesarte {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .podria-interesarte article {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 0px;
+  }
+
+  .podria-interesarte article img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 6px;
+  }
+
+  .podria-interesarte .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .podria-interesarte .títulosArtículos {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .podria-interesarte p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+  }
+
+  /*===== modal perfil  MOBILE =====*/
+  .modal-contenido {
+    width: 90%;
+    padding: 20px;
+    border-radius: 8px;
+    gap: 12px;
+  }
+
+  .modal-contenido h2 {
+    font-size: 45px;
+  }
+
+  .modal-contenido label {
+    font-size: 25px;
+  }
+
+  .modal-contenido input {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .btn-submit {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .btn-submit {
+    background: #d90429;
+    color: white;
+    width: 330px;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .btn-submit:hover {
+    background: #a0031f;
+  }
+
+  .cerrar {
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+  }
+
+  .registro-texto {
+    font-size: 12px;
+  }
+}
