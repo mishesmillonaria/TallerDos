@@ -90,7 +90,6 @@ nav li {
 .navegacion {
   width: 60px;
   height: 60px;
-
   margin-top: -10px;
   margin-bottom: 45px;
   filter: invert(100%);
@@ -126,7 +125,7 @@ nav li {
 }
 
 /*===== SECCION NOTICIA RELEVANTE =====*/
-.articulitos {
+.podria-interesarte {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
   gap: 25px;
@@ -134,16 +133,15 @@ nav li {
   margin: 50px auto;
 }
 
-.articulitos article {
+.podria-interesarte article {
   display: flex;
-  flex-direction: row;
   gap: 15px;
   align-items: flex-start;
   padding: 20px;
   margin-left: 0px;
 }
 
-.imagencitas {
+.soy_Cuca {
   width: 220px;
   height: 150px;
   object-fit: cover;
@@ -151,131 +149,22 @@ nav li {
   border-radius: 6px;
 }
 
-.articulitos .texto {
+.podria-interesarte .texto {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.articulitos .títulosArtículos {
-  display: flex;
-  flex-wrap: wrap;
-  width: 60%;
+.podria-interesarte .títulosArtículos {
   font-size: 1rem;
   margin: 0;
   line-height: 1.3;
 }
 
-.articulitos p {
+.podria-interesarte p {
   font-size: 0.85rem;
   color: #666;
   margin: 0;
-
-  flex-wrap: wrap;
-  width: 60%;
-}
-
-.artículoChikitito {
-  display: flex;
-  flex-direction: column;
-}
-
-.botoncito_rata {
-  position: absolute;
-  margin-left: 4px;
-  margin-top: 4px;
-  width: 28px;
-  height: 28px;
-}
-
-/*
-
-.guia-juego {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  margin: 10px;
-  border: 2px solid #000;
-  border-bottom: 6px solid #000;
-}
-
-.guia-juego img {
-  width: 100%;
-}
-
-.guia-juego p {
-  font-size: 24px;
-}
-
-*/
-
-/*===== SECCIÓN NOTICIAS =====*/
-.noticias {
-  margin: 60px;
-}
-#review-card {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  padding: 50px;
-  border-radius: 8px;
-}
-
-#review-card img {
-  width: 50%;
-  height: 20%;
-  object-fit: cover;
-  flex-shrink: 0; /* Evita que la imagen se encoja */
-  /*Del flex-shrink no sabía, gracias.*/
-  border-radius: 6px;
-}
-
-.contenido {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contenido h1 {
-  font-size: 1.8rem;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.contenido h2 {
-  font-size: 1.2rem;
-  margin: 0;
-  font-weight: 400;
-  color: #555;
-}
-
-.contenido p {
-  font-size: 1rem;
-  margin: 0;
-  color: #333;
-  line-height: 1.5;
-}
-
-.btn-review {
-  display: inline-block;
-  background: #d90429; /* Azul, ah, re daltónia. */
-  /*Daltónica, disléxica. */
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 600;
-  width: 70%;
-  height: 20%;
-  margin-top: 10px;
-  /* margin-left: 45px;*/
-  transition: background 0.2s;
-  text-align: center;
-}
-
-.btn-review:hover {
-  background: #a0031f;
 }
 
 /* ----- VALORACIÓN ----- */
@@ -296,7 +185,7 @@ nav li {
 }
 
 .reaction i {
-  font-size: 24px;
+  font-size: 20px;
   color: black;
 }
 
@@ -319,6 +208,130 @@ nav li {
   font-size: 14px;
 }
 
+/*===== SECCIÓN NOTICIAS =====*/
+.noticias {
+  margin: 60px;
+}
+#review-card {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.img-card {
+  width: 50%;
+  height: 20%;
+  object-fit: cover;
+  flex-shrink: 0; /* Evita que la imagen se encoja */
+  /*Del flex-shrink no sabía, gracias.*/
+  border-radius: 6px;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenido h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 1.2;
+  color: black;
+}
+
+.contenido h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 400;
+  color: #555;
+}
+
+.contenido p {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.contenido h1:hover {
+  color: #f33535;
+}
+
+.btn-review {
+  display: inline-block;
+  background: #d90429; /* Rojo */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 70%;
+  height: 20%;
+  margin-top: 10px;
+  margin-left: 45px;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.btn-review:hover {
+  background: #a0031f; /* Rojo más oscuro al pasar el mouse */
+}
+
+.cargarNoticias {
+  width: 50%;
+  height: 50px;
+  display: inline-block;
+  background: white;
+  color: #f33535;
+  border-color: #f33535;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cargarNoticias:hover {
+  background: #f33535;
+  color: white;
+  cursor: pointer;
+  border-color: transparent;
+}
+
+.botoncito_rata {
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 4px;
+  width: 28px;
+  height: 28px;
+}
+
+.botón_rata {
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 8px;
+  width: 38px;
+  height: 38px;
+}
+
+/*===== PIE DE PÁGINA =====*/
+
+footer {
+  background-image: url("./Imgs/Textura_Footer_Mobile.png");
+  color: #fff;
+  text-align: left;
+  padding: 40px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.noticiasuelta {
+  text-decoration: none;
+}
+
 .cargarNoticias {
   width: 60%;
   height: 50px;
@@ -338,23 +351,6 @@ nav li {
   cursor: pointer;
   border-color: transparent;
 }
-/*===== PIE DE PÁGINA =====*/
-
-footer {
-  background-image: url("./Imgs/Textura_Footer_Mobile.png");
-  color: #fff;
-  text-align: left;
-  padding: 40px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.noticiasuelta {
-  text-decoration: none;
-}
-
 /* Responsive para 412px x 932px */
 @media (max-width: 412px) {
   /*NAV MOBILE*/
@@ -506,9 +502,17 @@ html {
   .noticias h2 {
     display: none;
   }
+  .rating-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 28px;
+    gap: 50px;
+  }
   #review-card {
     display: flex;
-    gap: 40px;
+    gap: 15px;
     align-items: flex-start;
     padding: 0px;
     padding-bottom: 25px;
@@ -577,7 +581,7 @@ html {
   }
   /* SECCION NOTICIAS MOBILE */
   .cargarNoticias {
-    width: 100%;
+    width: 70%;
     height: 50px;
     display: inline-block;
     background: white; /* Rojo */
@@ -586,5 +590,6 @@ html {
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
+    margin-left: 60px;
   }
 }
