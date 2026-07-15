@@ -506,24 +506,28 @@ ul.carrusel li {
   font-size: 14px;
 }
 
-.reaction i, .reacciónChiquita i {
+.reaction i,
+.reacciónChiquita i {
   color: #000; /* Negro por defecto */
   cursor: pointer;
   transition: color 0.2s ease; /* animación suave */
 }
 
-.reaction i.activo, .reacciónChiquita i.activo {
+.reaction i.activo,
+.reacciónChiquita i.activo {
   color: #d90429; /* Rojo cuando está activo */
 }
 
-.botoncito_rata, .botón_rata {
+.botoncito_rata,
+.botón_rata {
   cursor: pointer; /* manito al pasar */
   width: 40px; /* ajusta el tamaño que quieras */
   height: 40px;
   transition: transform 0.2s;
 }
 
-.botoncito_rata:hover, .botón_rata:hover {
+.botoncito_rata:hover,
+.botón_rata:hover {
   transform: scale(1.1); /* efecto al pasar mouse */
 }
 
@@ -552,7 +556,7 @@ ul.carrusel li {
   padding: 14px 20px;
   border-radius: 8px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.3s ease;
@@ -718,7 +722,7 @@ html {
     margin-left: 30px;
   }
 
-  .principal img {
+  .principalcita {
     align-items: center;
     width: 100%;
     height: 85%;
@@ -749,7 +753,7 @@ html {
     align-items: flex-start;
   }
 
-  .secundario img {
+  .secundarias {
     width: 140px;
     height: 100px;
     object-fit: cover;
@@ -836,7 +840,7 @@ html {
     border-radius: 8px;
   }
 
-  #review-card img {
+  .imgs-card {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -920,7 +924,7 @@ html {
     margin-left: 0px;
   }
 
-  .podria-interesarte article img {
+  .imgs-podria-interesarte {
     width: 220px;
     height: 150px;
     object-fit: cover;
@@ -996,7 +1000,7 @@ html {
     display: none;
   }
 
-  .principal img {
+  .principalcita {
     align-items: center;
     width: 100%;
     height: 85%;
@@ -1033,7 +1037,7 @@ html {
     gap: 28px;
   }
 
-  .secundario img {
+  .secundarias {
     width: 140px;
     height: 100px;
     object-fit: cover;
@@ -1122,7 +1126,7 @@ html {
     border-radius: 8px;
   }
 
-  #review-card img {
+  .imgs-card {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -1206,7 +1210,7 @@ html {
     margin-left: 0px;
   }
 
-  .podria-interesarte article img {
+  .imgs-podria-interesarte {
     width: 220px;
     height: 150px;
     object-fit: cover;

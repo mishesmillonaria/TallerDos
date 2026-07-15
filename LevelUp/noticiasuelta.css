@@ -794,6 +794,11 @@ html {
     align-items: flex-start;
   }
 
+  .avatar-sinFotito {
+    width: 60px;
+    height: 60px;
+  }
+
   .avatar {
     width: 60px;
     height: 60px;

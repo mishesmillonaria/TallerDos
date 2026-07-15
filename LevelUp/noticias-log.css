@@ -315,6 +315,69 @@ nav li {
   height: 38px;
 }
 
+.reaction i,
+.reacciónChiquita i {
+  color: #000; /* Negro por defecto */
+  cursor: pointer;
+  transition: color 0.2s ease; /* animación suave */
+}
+
+.reaction i.activo,
+.reacciónChiquita i.activo {
+  color: #d90429; /* Rojo cuando está activo */
+}
+
+.botoncito_rata,
+.botón_rata {
+  cursor: pointer; /* manito al pasar */
+  width: 40px; /* ajusta el tamaño que quieras */
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.botoncito_rata:hover,
+.botón_rata:hover {
+  transform: scale(1.1); /* efecto al pasar mouse */
+}
+
+.botoncito_rata {
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 4px;
+  width: 28px;
+  height: 28px;
+}
+
+.botón_rata {
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 8px;
+  width: 38px;
+  height: 38px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745; /* Verde éxito */
+  color: white;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 2000;
+  pointer-events: none; /* Para que no estorbe clicks */
+}
+
+.toast.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*===== PIE DE PÁGINA =====*/
 
 footer {
@@ -450,7 +513,7 @@ html {
     margin-left: 0px;
   }
 
-  .podria-interesarte article img {
+  .soy_Cuca {
     width: 220px;
     height: 150px;
     object-fit: cover;
@@ -519,7 +582,7 @@ html {
     border-radius: 8px;
   }
 
-  #review-card img {
+  .img-card {
     width: 50%;
     height: 20%;
     object-fit: cover;
