@@ -1,0 +1,429 @@
+<html lang="es">
+  <head>
+    <title>LevelUp</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LevelUp" />
+    <link rel="stylesheet" href="guias.log.css" />
+    <script src="guias.js"></script>
+    <script src="botonguardar.js"></script>
+    <!-- Font Awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <header class="header-espaciado">
+      <nav>
+        <a href="./home-log.html" id="logo">
+          <img src="imgs/Logo_LevelUp.png" alt="" />
+        </a>
+        <ul class="menu-nav">
+          <li><a href="./noticias-log.html">Noticias</a></li>
+          <li><a href="./juegos-log.html">Juegos</a></li>
+          <li><a href="./articulos-log.html">Artículos</a></li>
+          <li><a href="./Reviews-log.html">Reviews</a></li>
+          <li><a href="./guias-log.html">Guías</a></li>
+          <li>
+            <p class="naveg-texto">Buscar</p>
+            <img class="navegacion" src="Imgs/lupaNave.png" alt="" />
+          </li>
+        </ul>
+
+        <a id="perfil-login" href="perfil.html">
+          <img class="perfil-img" src="imgs/Usuario_sexy.png" alt="" />
+        </a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburguesa">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <!-- ===== Seccion superior (barra de busqueda y inicio de sesion) =====-->
+
+    <section class="top-bar">
+      <p class="login-message">
+        <a href="hacerguia.html">
+          <button class="crear-guia">
+            <a href="hacerguia.html">CREAR GUIA NUEVA</a>
+          </button>
+        </a>
+      </p>
+
+      <form class="search-box">
+        <input type="text" placeholder="Busca una guía o videojuego..." />
+
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </section>
+
+    <!-- =======================
+         SECCIÓN ARTÍCULOS
+    ======================== -->
+
+    <section class="articles">
+      <!-- Artículo -->
+
+      <article class="guide-card">
+        <div class="card-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Guía 100% Logros Cyberpunk 2077 + Phantom Liberty</h2>
+        </div>
+
+        <p class="game">
+          JUEGOS:
+          <a href="#">CYBERPUNK 2077</a>,
+          <a href="#">PHANTOM LIBERTY</a>
+        </p>
+
+        <div class="card-info">
+          <span class="author">
+            POR
+            <a href="#">ROGELIO FLORES</a>
+          </span>
+
+          <div class="votes">
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+              1.4k
+            </span>
+
+            <span>
+              <i class="fa-solid fa-thumbs-down"></i>
+              67
+            </span>
+          </div>
+        </div>
+
+        <p class="description">
+          Esta guía está diseñada para todas aquellas personas que les apasiona
+          conseguir el 100% de los logros y quieren exprimir al máximo Cyberpunk
+          2077.
+        </p>
+
+        <!-- Espacio para imagen -->
+
+        <button class="read-btn">SEGUIR LEYENDO</button>
+      </article>
+
+      <article class="guide-card">
+        <div class="card-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Speedrunner Logro Guía | NO Niebla / NO Fantasma</h2>
+        </div>
+
+        <p class="game">
+          JUEGOS:
+          <a href="#">HOLLOW KNIGHT: SILKSONG</a>
+        </p>
+
+        <div class="card-info">
+          <span class="author">
+            POR
+            <a href="#">PEDRO RAMIREZ</a>
+          </span>
+
+          <div class="votes">
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+              1.1k
+            </span>
+
+            <span>
+              <i class="fa-solid fa-thumbs-down"></i>
+              4
+            </span>
+          </div>
+        </div>
+
+        <p class="description">
+          Esta guía muestra una ruta alternativa para completar el juego en
+          menos de 5 horas.
+        </p>
+
+        <button class="read-btn">SEGUIR LEYENDO</button>
+      </article>
+
+      <article class="guide-card">
+        <div class="card-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Como saltar en Geometry Dash 100% REAL</h2>
+        </div>
+
+        <p class="game">
+          JUEGOS:
+          <a href="#">GEOMETRY DASH</a>
+        </p>
+
+        <div class="card-info">
+          <span class="author">
+            POR
+            <a href="#">MATEO ESPINOZA</a>
+          </span>
+
+          <div class="votes">
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+              1.6k
+            </span>
+
+            <span>
+              <i class="fa-solid fa-thumbs-down"></i>
+              54
+            </span>
+          </div>
+        </div>
+
+        <p class="description">
+          En esta guía te enseñaré a dominar los saltos en Geometry Dash tanto
+          en PC como en móvil.
+        </p>
+
+        <button class="read-btn">SEGUIR LEYENDO</button>
+      </article>
+
+      <article class="guide-card">
+        <div class="card-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Como ser buen medic</h2>
+        </div>
+
+        <p class="game">
+          JUEGOS:
+          <a href="#">TEAM FORTRESS 2</a>
+        </p>
+
+        <div class="card-info">
+          <span class="author">
+            POR
+            <a href="#">JORGE_ELCUMBIERO</a>
+          </span>
+
+          <div class="votes">
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+              9.9k
+            </span>
+
+            <span>
+              <i class="fa-solid fa-thumbs-down"></i>
+              1
+            </span>
+          </div>
+        </div>
+
+        <p class="description">No mueras.</p>
+
+        <button class="read-btn">SEGUIR LEYENDO</button>
+      </article>
+      <article class="guide-card">
+        <div class="card-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Guía 100% Logros Cyberpunk 2077 + Phantom Liberty</h2>
+        </div>
+
+        <p class="game">
+          JUEGOS:
+          <a href="#">CYBERPUNK 2077</a>,
+          <a href="#">PHANTOM LIBERTY</a>
+        </p>
+
+        <div class="card-info">
+          <span class="author">
+            POR
+            <a href="#">ROGELIO FLORES</a>
+          </span>
+
+          <div class="votes">
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+              1.4k
+            </span>
+
+            <span>
+              <i class="fa-solid fa-thumbs-down"></i>
+              67
+            </span>
+          </div>
+        </div>
+
+        <p class="description">
+          Esta guía está diseñada para todas aquellas personas que les apasiona
+          conseguir el 100% de los logros y quieren exprimir al máximo Cyberpunk
+          2077.
+        </p>
+
+        <!-- Espacio para imagen -->
+
+        <button class="read-btn">SEGUIR LEYENDO</button>
+      </article>
+      <article class="guide-card">
+        <div class="card-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Guía 100% Logros Cyberpunk 2077 + Phantom Liberty</h2>
+        </div>
+
+        <p class="game">
+          JUEGOS:
+          <a href="#">CYBERPUNK 2077</a>,
+          <a href="#">PHANTOM LIBERTY</a>
+        </p>
+
+        <div class="card-info">
+          <span class="author">
+            POR
+            <a href="#">ROGELIO FLORES</a>
+          </span>
+
+          <div class="votes">
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+              1.4k
+            </span>
+
+            <span>
+              <i class="fa-solid fa-thumbs-down"></i>
+              67
+            </span>
+          </div>
+        </div>
+
+        <p class="description">
+          Esta guía está diseñada para todas aquellas personas que les apasiona
+          conseguir el 100% de los logros y quieren exprimir al máximo Cyberpunk
+          2077.
+        </p>
+
+        <!-- Espacio para imagen -->
+
+        <button class="read-btn">SEGUIR LEYENDO</button>
+      </article>
+      <article class="guide-card">
+        <div class="card-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Guía 100% Logros Cyberpunk 2077 + Phantom Liberty</h2>
+        </div>
+
+        <p class="game">
+          JUEGOS:
+          <a href="#">CYBERPUNK 2077</a>,
+          <a href="#">PHANTOM LIBERTY</a>
+        </p>
+
+        <div class="card-info">
+          <span class="author">
+            POR
+            <a href="#">ROGELIO FLORES</a>
+          </span>
+
+          <div class="votes">
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+              1.4k
+            </span>
+
+            <span>
+              <i class="fa-solid fa-thumbs-down"></i>
+              67
+            </span>
+          </div>
+        </div>
+
+        <p class="description">
+          Esta guía está diseñada para todas aquellas personas que les apasiona
+          conseguir el 100% de los logros y quieren exprimir al máximo Cyberpunk
+          2077.
+        </p>
+
+        <!-- Espacio para imagen -->
+
+        <button class="read-btn">SEGUIR LEYENDO</button>
+      </article>
+      <article class="guide-card">
+        <div class="card-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Guía 100% Logros Cyberpunk 2077 + Phantom Liberty</h2>
+        </div>
+
+        <p class="game">
+          JUEGOS:
+          <a href="#">CYBERPUNK 2077</a>,
+          <a href="#">PHANTOM LIBERTY</a>
+        </p>
+
+        <div class="card-info">
+          <span class="author">
+            POR
+            <a href="#">ROGELIO FLORES</a>
+          </span>
+
+          <div class="votes">
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+              1.4k
+            </span>
+
+            <span>
+              <i class="fa-solid fa-thumbs-down"></i>
+              67
+            </span>
+          </div>
+        </div>
+
+        <p class="description">
+          Esta guía está diseñada para todas aquellas personas que les apasiona
+          conseguir el 100% de los logros y quieren exprimir al máximo Cyberpunk
+          2077.
+        </p>
+
+        <!-- Espacio para imagen -->
+
+        <button class="read-btn">SEGUIR LEYENDO</button>
+      </article>
+    </section>
+
+    <footer>
+      <a href="https://www.levelup.com/"
+        ><img src="" alt="" />
+        <img src="./Imgs/Logo_LevelUp.png" alt="" />
+      </a>
+      <h5>&copy; Derechos reservados BUSCA TODO.COM S. DE R.L. DE C.V.</h5>
+    </footer>
+  </body>
+</html>

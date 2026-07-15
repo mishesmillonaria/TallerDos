@@ -1,0 +1,463 @@
+<html lang="es">
+  <head>
+    <title>LevelUp</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LevelUp" />
+    <link rel="stylesheet" href="noticiasuelta.css" />
+    <link rel="stylesheet" href="estiloModal.css" />
+    <script src="Login.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html" id="logo">
+          <img src="imgs/Logo_LevelUp.png" alt="" />
+        </a>
+        <ul class="menu-nav">
+          <li><a href="./Noticias.html">Noticias</a></li>
+          <li><a href="./juegos.html">Juegos</a></li>
+          <li><a href="./articulos.html">Artículos</a></li>
+          <li><a href="./Reviews.html">Reviews</a></li>
+          <li><a href="./guias.html">Guías</a></li>
+          <li>
+            <p class="naveg-texto">Buscar</p>
+            <img class="navegacion" src="Imgs/lupaNave.png" alt="" />
+          </li>
+        </ul>
+
+        <a id="perfil-login" href="">
+          <img class="perfil-img" src="imgs/perfilNo.png" alt="" />
+        </a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburguesa">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </nav>
+
+      <!-- Modal Login -->
+      <div id="login-modal" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" data-cerrar="login-modal">&times;</span>
+          <h2>Iniciar Sesión</h2>
+
+          <!-- Cartel de mensaje -->
+          <div id="mensaje-login" class="mensaje"></div>
+
+          <form id="form-login">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required />
+
+            <button type="submit" class="btn-submit">Entrar</button>
+          </form>
+          <p class="registro-texto">
+            ¿No tienes cuenta aún?
+            <a href="#" class="abrir-registro">Regístrate aquí</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal Registro -->
+      <div id="registro-modal" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" data-cerrar="registro-modal">&times;</span>
+          <h1 class="títuloSección">/REGISTRATE</h1>
+
+          <!-- Cartel de mensaje -->
+          <div id="mensaje-registro" class="mensaje"></div>
+
+          <form id="form-registro">
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Nombre del Usuario"
+              required
+            />
+            <input
+              type="text"
+              name="apellido"
+              placeholder="Apellido del Usuario"
+              required
+            />
+            <input
+              type="email"
+              name="correo"
+              placeholder="Ingresar correo Electrónico"
+              required
+            />
+            <input
+              type="password"
+              name="contraseña"
+              placeholder="Ingresar Contraseña"
+              required
+            />
+            <input
+              type="password"
+              name="contraseñaRepetida"
+              placeholder="Repetir contraseña"
+              required
+            />
+
+            <h2 class="títuloArtículo">/Vincular Cuentas</h2>
+            <div class="iconos-social">
+              <img class="icono-registro" src="imgs/google.png" alt="Google" />
+              <img
+                class="icono-registro"
+                src="imgs/facebook.png"
+                alt="Facebook"
+              />
+              <img
+                class="icono-registro"
+                src="imgs/twitter.png"
+                alt="Twitter"
+              />
+              <img
+                class="icono-registro"
+                src="imgs/discord.png"
+                alt="Discord"
+              />
+            </div>
+
+            <input type="submit" value="Registrar" class="btn-submit" />
+          </form>
+          <p class="texto-registro">
+            ¿Ya tienes una cuenta?
+            <a href="#" class="abrir-login">Inicia sesión</a>
+          </p>
+        </div>
+      </div>
+    </header>
+    <br />
+    <br />
+    <h1 class="títulosSección loles">/ Noticia</h1>
+    <section class="NoticiaSingular">
+      <article>
+        <div class="contenido-noticia">
+          <h2 class="títuloArtículo">
+            ¿Halo y Gears of War: E-Day tendrán cooperativo en pantalla
+            dividida? Esto es lo que debes saber sobre el modo multijugador de
+            ambos juegos
+          </h2>
+          <p class="textoEstrofa">
+            Microsoft compartió más detalles sobre cómo funcionarán los
+            apartados multiplayer de los próximos juegos de sus franquicias
+            insignia
+          </p>
+          <div class="meta-autor">
+            <div class="info-autor">
+              <p class="Autor">
+                Por: <span class="nombre-autor">Ulises Contreras</span>
+              </p>
+              <p class="Fecha">9 de Julio</p>
+            </div>
+            <button class="guardar">GUARDAR</button>
+          </div>
+        </div>
+        <img
+          class="img-noticia"
+          src="./Imgs/Noticias/Noticia_Halo_GOW.png"
+          alt="HALO"
+        />
+      </article>
+    </section>
+    <section class="textoLArgo">
+      <p class="supertexto">
+        Hace un par de días se llevó a cabo el <strong
+          >XBOX Games Showcase 2026,</strong
+        >
+        una presentación en la que Microsoft mostró avances de los títulos que
+        llegarán próximamente a su consola y otras plataformas. Los fans
+        nostálgicos están muy felices, pues tanto <strong
+          >Halo: Campaign Evolved</strong
+        > como <strong>Gears of War: E-Day</strong> hicieron acto de presencia.
+        Y sí, ambos juegos traerán de regreso una función que, tristemente, se
+        perdió con el paso de los años.
+        <br />
+        <br />
+        Tras el evento, salió a la luz mucha información sobre las nuevas
+        entregas de las franquicias insignia de XBOX. Lo interesante es que los
+        2 juegos recuperarán el modo cooperativo en <strong
+          >pantalla dividida,</strong
+        >
+        lo que significa que los jugadores podrán disfrutar estas propuestas en
+        compañía de un amigo en el mismo sillón.
+        <br />
+        <br />
+        Pero eso no es todo, pues tanto la aventura del Master Chief como el
+        viaje de Marcus Fenix tendrán otras modalidades multijugador que
+        expandirán el abanico de posibilidades.
+      </p>
+    </section>
+    <h1 class="títulosSección loles2">
+      / Halo: Campaign Evolved tendrá cross-play y multijugador local en
+      pantalla dividida
+    </h1>
+    <section class="textoLArgo">
+      <p class="supertexto">
+        De acuerdo con la información oficial, hasta 2 jugadores podrán jugar la
+        campaña narrativa en el mismo sillón en XBOX Series X|S y PlayStation 5.
+        Tristemente, y como ya es tradición, todo parece indicar que esta
+        función brillará por su ausencia en el port para PC. Aun así, es bueno
+        saber que la pantalla dividida está de vuelta.
+        <br />
+        <br />
+        Los desarrolladores también pensaron en una alternativa para aquellos
+        que prefieren jugar en línea con sus amigos. Halo: Campaign
+        Evolved admitirá sesiones online para hasta 4 jugadores, y lo mejor es
+        que habrá cross-play. Esto significa que los fans podrán conectarse a la
+        misma partida, independientemente de si juegan en XBOX, PS5 o PC.
+      </p>
+    </section>
+    <br />
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/hSjbIM0iegY?si=sREbDfPcBdyaNM8F"
+      title="YouTube video player"
+      frameborder="0"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container">
+      <!-- Valoración -->
+      <section class="rating">
+        <h3>¿Esta noticia te ha parecido útil?</h3>
+
+        <div class="rating-actions">
+          <div class="reaction">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span>65 Me gusta</span>
+          </div>
+
+          <div class="reaction">
+            <i class="fa-solid fa-thumbs-down"></i>
+            <span>0 No me gusta</span>
+          </div>
+          <button class="share-btn">COMPARTIR</button>
+        </div>
+      </section>
+
+      <!-- Autor + Juegos -->
+      <section class="info-section">
+        <div class="author-box">
+          <h2>/ ACERCA DEL AUTOR</h2>
+
+          <div class="author-content">
+            <img src="imgs/Ulises_Contreras.png" alt="Autor" />
+
+            <div>
+              <h4>Ulises Contreras</h4>
+              <p>
+                Editor y redactor desde 2020. Amo los juegos de peleas y los
+                FPS, pero soy malísimo en todos. Escribo noticias, artículos y
+                reseñas sobre la actualidad de la industria del gaming.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="games-box">
+          <h2>/ JUEGOS MENCIONADOS</h2>
+
+          <div class="games-grid">
+            <div class="game-card">
+              <img src="./Imgs/Noticias/Noticia_Halo_GOW.png" alt="Halo" />
+              <h4>Halo:<br />Campaign Evolved</h4>
+              <button>VOTAR AL RANKING</button>
+              <button>
+                VER GUÍAS
+                <aside></aside>
+              </button>
+              <button>VER RESEÑAS</button>
+            </div>
+
+            <div class="game-card">
+              <img src="https://via.placeholder.com/120" alt="Gears" />
+              <h4>Gears of War:<br />E-Day</h4>
+              <button>VOTAR AL RANKING</button>
+              <button>
+                VER GUÍAS
+                <aside></aside>
+              </button>
+              <button>VER RESEÑAS</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comentarios -->
+      <section class="comments">
+        <h2>/ COMENTARIOS</h2>
+
+        <div class="login-message">
+          <div class="avatar">
+            <img class="avatar-sinFotito" src="./Imgs/perfilNo.png" alt="" />
+          </div>
+          <p>Debes <a href="#">iniciar sesión</a> para comentar.</p>
+        </div>
+
+        <div class="comment">
+          <div class="avatar">
+            <img class="avatar-sinFotito" src="./Imgs/perfilNo.png" alt="" />
+          </div>
+
+          <div class="comment-body">
+            <h4>JESÚS PEREIRA</h4>
+            <span>10/06/26</span>
+
+            <p>
+              Acordate de agregar el ícono de información de bordes (regular)
+              Gracias por informar bien, muchos portales de noticias publicaron
+              locuras sobre esto. Mereces más reconocimiento.
+            </p>
+
+            <div class="comment-actions">
+              <a href="#">Responder</a>
+              <a href="#">Ver respuestas</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <h1 class="títulosSección loles2">/ Podría interesarte</h1>
+    <section class="podria-interesarte articulitos">
+      <article>
+        <img src="./Imgs/Podría interesarte/Anti-RDR.png" alt="" />
+        <div class="texto">
+          <h2 class="títulosArtículos">
+            El anti-Red Dead Redemption que nadie esperaba: este videojuego del
+            oeste ya cuenta con un 98% de aprobación de los jugadores
+          </h2>
+          <p>Hace 5 horas</p>
+          <!-- Valoración -->
+
+          <div class="rating-actions reacciónChiquita">
+            <div>
+              <i class="fa-solid fa-thumbs-up"></i>
+              <span>1.4K</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-thumbs-down"></i>
+              <span>67</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <img src="./Imgs/Podría interesarte/Lies_Of_P.png" alt="" />
+        <div class="texto">
+          <h2 class="títulosArtículos">
+            Lies of P confirma una muy buena noticia para su versión en Nintendo
+            Switch 2
+          </h2>
+          <p>Hace 5 horas</p>
+          <!-- Valoración -->
+
+          <div class="rating-actions reacciónChiquita">
+            <div>
+              <i class="fa-solid fa-thumbs-up"></i>
+              <span>1.4K</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-thumbs-down"></i>
+              <span>67</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <img src="./Imgs/Podría interesarte/GTA_VI.png" alt="" />
+        <div class="texto">
+          <h2 class="títulosArtículos">
+            GTA VI: fan analiza los cigarrillos de los empleados de Rockstar
+            para adivinar cuándo se compartirá el tercer trailer del juego
+          </h2>
+          <p>Hace 6 horas</p>
+          <!-- Valoración -->
+
+          <div class="rating-actions reacciónChiquita">
+            <div>
+              <i class="fa-solid fa-thumbs-up"></i>
+              <span>1.4K</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-thumbs-down"></i>
+              <span>67</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <img src="./Imgs/Podría interesarte/Nintendo_SSR.png" alt="" />
+        <div class="texto">
+          <h2 class="títulosArtículos">
+            Nintendo Switch Sports Resort es una realidad y tendrá 12 deportes,
+            incluidos skateboarding y batallas de pulgares
+          </h2>
+          <p>Hace 23 horas</p>
+          <!-- Valoración -->
+
+          <div class="rating-actions reacciónChiquita">
+            <div>
+              <i class="fa-solid fa-thumbs-up"></i>
+              <span>1.4K</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-thumbs-down"></i>
+              <span>67</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <br />
+    <br />
+    <button class="cargarNoticias">CARGAR MAS NOTICIAS...</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer>
+      <a href="https://www.levelup.com/"
+        ><img src="" alt="" />
+        <img src="./Imgs/Logo_LevelUp.png" alt="" />
+      </a>
+      <h5>&copy; Derechos reservados BUSCA TODO.COM S. DE R.L. DE C.V.</h5>
+    </footer>
+  </body>
+</html>
