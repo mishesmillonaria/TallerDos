@@ -1,0 +1,94 @@
+<html lang="es">
+  <head>
+    <title>LevelUp</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LevelUp" />
+    <link rel="stylesheet" href="estilohacerguias.css" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./home-log.html" id="logo">
+          <img src="imgs/Logo_LevelUp.png" alt="" />
+        </a>
+        <ul class="menu-nav">
+          <li><a href="./noticias-log.html">Noticias</a></li>
+          <li><a href="./juegos-log.html">Juegos</a></li>
+          <li><a href="./articulos-log.html">Artículos</a></li>
+          <li><a href="./Reviews-log.html">Reviews</a></li>
+          <li><a href="./guias-log.html">Guías</a></li>
+          <li>
+            <p class="naveg-texto">Buscar</p>
+            <img class="navegacion" src="Imgs/lupaNave.png" alt="" />
+          </li>
+        </ul>
+
+        <a id="perfil-login" href="perfil.html">
+          <img class="perfil-img" src="imgs/Usuario_sexy.png" alt="" />
+        </a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburguesa">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <main class="contenedor-form-guia">
+    <form id="form-guia">
+      <!-- 1. Select de Juego con lupa -->
+      <div class="campo-form">
+        <label for="juego">Juego</label>
+        <div class="select-con-icono">
+          <i class="lupa">🔍</i>
+          <select name="juego" id="juego" required>
+            <option value="" disabled selected>Selecciona un juego</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="minecraft">Minecraft</option>
+            <option value="lol">League of Legends</option>
+            <option value="valorant">Valorant</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 2. Título de la guía -->
+      <div class="campo-form">
+        <label for="titulo">Título de la Guía</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ej: Cómo subir de rango rápido" required>
+      </div>
+
+      <!-- 3. Cuerpo de la guía -->
+      <div class="campo-form">
+        <label for="cuerpo">Cuerpo de la Guía</label>
+        <textarea id="cuerpo" name="cuerpo" placeholder="Escribe aquí tu guía paso a paso..." rows="10" required></textarea>
+      </div>
+
+      <!-- 4. Botón para agregar imágenes -->
+      <div class="campo-form">
+        <button type="button" class="btn-imagen">+ Agregar Imágenes</button>
+      </div>
+
+      <!-- 5. Botón Publicar -->
+      <button type="submit" class="btn-publicar">Publicar Guía</button>
+    </form>
+  </main>
+
+  <script src="guias.js"></script>
+    <footer>
+      <a href="https://www.levelup.com/"
+        ><img src="" alt="" />
+        <img src="./Imgs/Logo_LevelUp.png" alt="" />
+      </a>
+      <h5>&copy; Derechos reservados BUSCA TODO.COM S. DE R.L. DE C.V.</h5>
+    </footer>
+  </body>
+</html>

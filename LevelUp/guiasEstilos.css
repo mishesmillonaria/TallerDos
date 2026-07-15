@@ -1,0 +1,571 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.header-espaciado {
+  padding: 64px;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+/*===== Barra de Navegacion =====*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6b0400;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul {
+  font-family: "Bebas Neue";
+  font-size: 48px;
+}
+
+nav li {
+  font-size: 35px;
+  margin-right: 10px;
+  margin-top: 45px;
+  display: inline-block;
+}
+
+#logo {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 160px;
+  object-fit: cover;
+  width: 70px;
+  height: 50px;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ocultar checkbox y hamburguesa en desktop */
+#menu-toggle,
+.hamburguesa {
+  display: none;
+}
+
+.hamburguesa {
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.navegacion {
+  width: 60px;
+  height: 60px;
+  margin-top: -10px;
+  margin-bottom: 45px;
+  filter: invert(100%);
+}
+
+.naveg-texto {
+  display: none;
+}
+
+/*===== PERFIL LOGIN =====*/
+.perfil-img {
+  height: 60px;
+  width: 60px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+.títulosSección {
+  font-size: 60px;
+}
+
+.títulosArtículos {
+  font-size: 40px;
+}
+
+.títulosArtículos:hover {
+  color: #f33535;
+}
+
+#noticias {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.títulosSección {
+  grid-column: 1 / 3;
+  margin-bottom: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family:Arial, Helvetica, sans-serif;*/
+}
+
+body {
+  background: #f5f5f5;
+  padding: 30px 50px;
+}
+
+/*==========================
+    BARRA SUPERIOR
+==========================*/
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  gap: 175px;
+}
+
+.login-message {
+  font-size: 20px;
+  color: #222;
+  text-align: center;
+}
+
+.login-message a {
+  color: #d83a3a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-box {
+  width: 600px;
+  height: 45px;
+  display: flex;
+}
+
+.search-box input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-right: none;
+  padding: 0 15px;
+  outline: none;
+  font-size: 20px;
+  background: white;
+}
+
+.search-box button {
+  width: 55px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #d83a3a;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search-box button:hover {
+  background: #f7f7f7;
+}
+
+/*==========================
+    ARTÍCULOS
+==========================*/
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/*==========================
+      TARJETA
+==========================*/
+
+.guide-card {
+  background: white;
+  border: 1px solid #8f8f8f;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.user-icon {
+  width: 42px;
+  height: 42px;
+  background: #eb4040;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.game {
+  margin-bottom: 18px;
+  color: #e23b3b;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.game a {
+  color: #e23b3b;
+  text-decoration: none;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  font-weight: bold;
+  color: #111;
+}
+
+.author a {
+  color: #d83a3a;
+  text-decoration: none;
+}
+
+.votes {
+  display: flex;
+  gap: 18px;
+}
+
+.votes span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.votes i {
+  color: black;
+}
+
+.votes i.activo {
+  color: #d90429; /* Rojo cuando está activo */
+}
+
+.description {
+  color: #444;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/*==========================
+      BOTÓN
+==========================*/
+
+.read-btn {
+  width: 170px;
+  height: 42px;
+  margin: auto auto 0;
+  border: 2px solid #d83a3a;
+  background: white;
+  color: #d83a3a;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.read-btn:hover {
+  background: #d83a3a;
+  color: white;
+}
+/* Darle espaciado lateral a todo */
+body {
+  margin: 0;
+  padding: 0 16px; /* 16px de aire a izquierda y derecha */
+  box-sizing: border-box;
+  background: #f5f5f5; /* opcional, para que resalte el blanco de las cards */
+}
+
+/* Que nada se desborde */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. Top bar y Articles que ocupen el 100% del ancho disponible */
+.top-bar, 
+.articles {
+  width: 100%;
+  max-width: 1200px; /* para que en escritorio no se estire demasiado */
+  margin: 0 auto; /* centrar */
+}
+
+/* Darle separación entre secciones */
+.top-bar {
+  padding: 20px 0;
+}
+
+.articles {
+  padding: 20px 0;
+  gap: 20px; /* espacio entre cada guide-card */
+}
+.crear-guia{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    height:80px;
+
+    background:#ff3030;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:1.2rem;
+
+}
+.votes i.activo {
+  color: #d90429; /* Rojo cuando está activo */
+}
+
+/*===== PIE DE PÁGINA =====*/
+
+footer {
+  background-image: url("./Imgs/Textura_Footer_Mobile.png");
+  color: #fff;
+  text-align: left;
+  padding: 40px;
+}
+/* Responsive para 412px x 932px */
+@media (max-width: 412px) {
+  /*NAV MOBILE*/
+  nav {
+    height: 80px;
+  }
+  .menu-nav {
+    position: absolute;
+    top: 100%;
+    left: 85px;
+    right: 0;
+    background: #000000;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    border-top: 1px solid #ddd;
+    z-index: 100;
+    width: 80%;
+  }
+  #logo {
+    order: 1;
+    width: 30px;
+    height: 50px;
+    margin-top: 15px;
+  }
+  .navegacion {
+    order: 3;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 60px;
+    margin-top: -55px;
+    filter: invert(100%);
+  }
+  .naveg-texto {
+    font-family: "Bebas Neue";
+    display: block;
+    font-size: 40px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+  }
+  #perfil-login {
+    order: 4;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+  .perfil-img {
+    width: 30px;
+    height: 30px;
+    margin-top: auto;
+    margin-left: 15px;
+  }
+  .menu-nav li a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburguesa {
+    display: flex;
+    order: 4;
+    margin-top: 30px;
+    color: #fff;
+  }
+  nav:has(#menu-toggle:checked) .menu-nav {
+    display: flex;
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(2) {
+    opacity: 0;
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* responsive de las secciones */
+
+  body {
+    padding: 15px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .login-message {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .search-box {
+    width: 100%;
+    height: 42px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+
+  .search-box button {
+    width: 48px;
+    font-size: 18px;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .guide-card {
+    padding: 15px;
+  }
+
+  .card-header h2 {
+    font-size: 18px;
+  }
+
+  .game,
+  .author,
+  .description {
+    font-size: 13px;
+  }
+
+  .card-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .votes {
+    gap: 15px;
+  }
+
+  .read-btn {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+  }
+  body {
+    padding: 0 12px; /* un poco menos de padding en mobile */
+  }
+
+  .top-bar {
+    padding: 15px 0;
+  }
+
+  /* Hacer que la barra de búsqueda no se desborde */
+  .search-box {
+    width: 100%;
+    display: flex;
+  }
+  .search-box input {
+    flex: 1;
+    min-width: 0; /* evita que el input empuje el botón */
+  }
+
+  /* Las cards que ocupen todo el ancho */
+  .guide-card {
+    width: 100%;
+  }
+
+  /* Ajuste de texto para que no se rompa */
+  .guide-card h2 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  
+  .card-info {
+    flex-wrap: wrap; /* por si autor + votos no entran */
+    gap: 10px;
+  }
+}
