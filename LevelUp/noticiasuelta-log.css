@@ -1,0 +1,941 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Tuve un conflicto con los archivos,
+espero que no explote nada.*/
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header-espaciado {
+  padding: 64px;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+/*===== Barra de Navegacion =====*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6b0400;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul {
+  font-family: "Bebas Neue";
+  font-size: 48px;
+}
+
+nav li {
+  font-size: 35px;
+  margin-right: 10px;
+  margin-top: 45px;
+  display: inline-block;
+}
+
+#logo {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 160px;
+  object-fit: cover;
+  width: 70px;
+  height: 50px;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ocultar checkbox y hamburguesa en desktop */
+#menu-toggle,
+.hamburguesa {
+  display: none;
+}
+
+.hamburguesa {
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.navegacion {
+  width: 60px;
+  height: 60px;
+  margin-top: -10px;
+  margin-bottom: 45px;
+  filter: invert(100%);
+}
+
+.naveg-texto {
+  display: none;
+}
+
+/*===== PERFIL LOGIN =====*/
+.perfil-img {
+  height: 60px;
+  width: 60px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+/*===== Primera seccion =====*/
+
+.títulosSección {
+  font-size: 60px;
+  width: 100%;
+}
+.loles {
+  margin-top: 170px;
+  margin-left: 60px;
+}
+.loles2 {
+  margin-top: 0px;
+  margin-left: 60px;
+}
+
+.títulosArtículos {
+  font-size: 40px;
+}
+
+.títulosArtículos:hover {
+  color: #f33535;
+}
+
+.NoticiaSingular article {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  gap: 40px;
+  align-items: start;
+  padding-top: 0px;
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-bottom: 0px;
+}
+
+.contenido-noticia {
+  display: flex;
+  flex-direction: column;
+}
+
+.textoEstrofa {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Fila de autor + fecha + botón */
+.meta-autor {
+  display: flex;
+  justify-content: space-between; /* Autor a izq, botón a der */
+  align-items: center;
+  margin-top: 15px;
+}
+
+.info-autor {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Autor,
+.Fecha {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.guardar {
+  background: white;
+  color: #d90429; /* Rojo */
+  border: 2px solid #d90429;
+  padding: 10px 22px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.guardar:hover {
+  background: #d90429;
+  color: white;
+}
+
+/* Segunda columna: imagen */
+.img-noticia {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.nombre-autor {
+  color: #d90429; /* Rojo */
+  font-weight: 600; /* Opcional, para que resalte más */
+}
+/* seccion dos */
+.textoLArgo {
+  padding-top: 0px;
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-bottom: 5%;
+  width: 100%;
+  height: fit-content;
+}
+.supertexto {
+  margin-top: 50px;
+  font-size: 20px;
+}
+iframe {
+  align-items: center;
+  width: 70%;
+  height: 500px;
+  margin-left: 170px;
+}
+/* seccion 3 */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* ----- VALORACIÓN ----- */
+
+.rating {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.rating h3 {
+  margin-bottom: 25px;
+  margin-left: -280px;
+  font-size: 20px;
+}
+
+.rating-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  flex-wrap: wrap;
+}
+
+.reaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.reaction i {
+  font-size: 42px;
+  color: #e74c3c;
+}
+
+.reaction i:hover {
+  cursor: pointer;
+}
+
+.reaction span {
+  font-size: 14px;
+}
+
+/*Tenés que cambiar los regular por los solid.
+Lo dejé a mano y escrito en el index nada más para tenerlo.
+Creo que sí o sí vamos a necesitar JavaScript,
+o sino la grande nunca será Cuca.*/
+
+/*
+ <i class="fa-solid fa-thumbs-down"></i>
+  <i class="fa-solid fa-thumbs-up"></i>
+} */
+
+/* ----- Versión chiquita. ----- */
+
+.reacciónChiquita {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-top: 12px;
+  gap: 28px;
+}
+
+.reacciónChiquita span {
+  font-size: 14px;
+}
+
+.share-btn {
+  border: 2px solid #e74c3c;
+  background: white;
+  color: #e74c3c;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ----- AUTOR + JUEGOS ----- */
+
+.info-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.author-box {
+  flex: 2;
+}
+
+.games-box {
+  flex: 1;
+}
+
+.author-box h2,
+.games-box h2,
+.comments h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+
+.author-content {
+  display: flex;
+  gap: 20px;
+  width: 340px;
+  margin-left: 170px;
+}
+
+.author-content img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.author-content h4 {
+  margin-bottom: 8px;
+}
+
+.author-content p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ----- JUEGOS ----- */
+
+.games-grid {
+  display: flex;
+  gap: 15px;
+}
+
+.game-card {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 0px;
+  width: 200px;
+}
+
+.game-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.game-card h4 {
+  margin: 10px 0;
+  min-height: 50px;
+}
+
+.game-card button {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e74c3c;
+  color: #e74c3c;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ----- COMENTARIOS ----- */
+
+.comments {
+  margin-top: 30px;
+}
+
+.login-message,
+.comment {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #ddd;
+  flex-shrink: 0;
+}
+
+.avatar-sinFotito {
+  filter: brightness(10);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.login-message p {
+  margin-top: 15px;
+}
+
+.login-message a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.comment-body h4 {
+  font-size: 18px;
+}
+
+.comment-body span {
+  display: block;
+  margin: 5px 0 15px;
+  color: #777;
+}
+
+.comment-body p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 25px;
+}
+
+/* Odio el inglés. Ahora quiero ponerle tildes
+y comas a todo. */
+
+.comment-actions a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+/*===== PODRIA INTERESARTE =====*/
+
+.podria-interesarte {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.podria-interesarte article {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 20px;
+  margin-left: 0px;
+}
+
+.podria-interesarte-img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.podria-interesarte .texto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.podria-interesarte .títulosArtículos {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.podria-interesarte p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+/*===== SECCION NOTICIA RELEVANTE =====*/
+.articulitos {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  gap: 25px;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.articulitos article {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 20px;
+  margin-left: 0px;
+}
+
+.articulitos .texto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.articulitos .títulosArtículos {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.articulitos p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.artículoChikitito {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 0px;
+}
+
+.cargarNoticias {
+  width: 60%;
+  height: 50px;
+  display: inline-block;
+  background: white; /* Rojo */
+  color: #f33535;
+  border-color: #f33535;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 270px;
+}
+
+.cargarNoticias:hover {
+  background: #f33535;
+  color: white;
+  cursor: pointer;
+  border-color: transparent;
+}
+
+.reaction i,
+.reacciónChiquita i {
+  color: #000; /* Negro por defecto */
+  cursor: pointer;
+  transition: color 0.2s ease; /* animación suave */
+}
+
+.reaction i.activo,
+.reacciónChiquita i.activo {
+  color: #d90429; /* Rojo cuando está activo */
+}
+
+.botoncito_rata,
+.botón_rata {
+  cursor: pointer; /* manito al pasar */
+  width: 40px; /* ajusta el tamaño que quieras */
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.botoncito_rata:hover,
+.botón_rata:hover {
+  transform: scale(1.1); /* efecto al pasar mouse */
+}
+
+.botoncito_rata {
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 4px;
+  width: 28px;
+  height: 28px;
+}
+
+.botón_rata {
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 8px;
+  width: 38px;
+  height: 38px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745; /* Verde éxito */
+  color: white;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 2000;
+  pointer-events: none; /* Para que no estorbe clicks */
+}
+
+.toast.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*===== PIE DE PÁGINA =====*/
+
+footer {
+  background-image: url("./Imgs/Textura_Footer_Mobile.png");
+  color: #fff;
+  text-align: left;
+  padding: 40px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Mobile: 1 columna */
+@media (max-width: 412px) {
+  /*NAV MOBILE*/
+  nav {
+    height: 80px;
+  }
+  .menu-nav {
+    position: absolute;
+    top: 100%;
+    left: 85px;
+    right: 0;
+    background: #000000;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    border-top: 1px solid #ddd;
+    z-index: 100;
+    width: 80%;
+  }
+  #logo {
+    order: 1;
+    width: 30px;
+    height: 50px;
+    margin-top: 15px;
+  }
+  .navegacion {
+    order: 3;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 60px;
+    margin-top: -55px;
+    filter: invert(100%);
+  }
+  .naveg-texto {
+    font-family: "Bebas Neue";
+    display: block;
+    font-size: 40px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+  }
+  #perfil-login {
+    order: 4;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+  .perfil-img {
+    width: 30px;
+    height: 30px;
+    margin-top: auto;
+    margin-left: 15px;
+  }
+  .menu-nav li a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburguesa {
+    display: flex;
+    order: 4;
+    margin-top: 30px;
+    color: #fff;
+  }
+  nav:has(#menu-toggle:checked) .menu-nav {
+    display: flex;
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(2) {
+    opacity: 0;
+  }
+  nav:has(#menu-toggle:checked) .hamburguesa span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  /*primera seccion movile*/
+
+  .NoticiaSingular article {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .img-noticia {
+    max-height: 250px;
+  }
+  .títulosSección {
+    font-size: 40px;
+    width: 100%;
+  }
+  .títuloArtículo {
+    font-size: 25px;
+    width: 100%;
+    margin-top: 0px;
+  }
+  .textoEstrofa {
+    font-size: 18px;
+  }
+  .textoLArgo {
+    padding-top: 0px;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    width: 100%;
+    height: fit-content;
+  }
+  .supertexto {
+    font-size: 18px;
+  }
+  /* segunda seccion mobile */
+  .loles {
+    margin-top: 80px;
+    margin-left: 30px;
+  }
+  .loles2 {
+    margin-top: 0px;
+    margin-left: 30px;
+    font-size: 25px;
+    width: 100%;
+  }
+  iframe {
+    width: 70%;
+    height: 250px;
+    margin-left: 70px;
+  }
+  /* tercera seccion mobile */
+  .container {
+    padding: 15px;
+  }
+
+  /* Valoración */
+  .rating-actions {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .rating h3 {
+    margin-bottom: 25px;
+    margin-left: 0px;
+    font-size: 20px;
+  }
+
+  .share-btn {
+    width: 210px;
+    margin-top: 10px;
+  }
+
+  /* Autor */
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .author-content {
+    align-items: flex-start;
+
+    width: 330px;
+    margin-left: 10px;
+  }
+
+  .author-content img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .author-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* Juegos mencionados */
+  .games-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .game-card {
+    width: calc(50% - 6px);
+    padding: 10px;
+  }
+
+  .game-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .game-card h4 {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .game-card button {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+
+  /* Comentarios */
+  .comment {
+    align-items: flex-start;
+  }
+
+  .avatar-sinFotito {
+    width: 60px;
+    height: 60px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .comment-actions {
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  /* Títulos */
+  .author-box h2,
+  .games-box h2,
+  .comments h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .games-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .game-card {
+    width: 100%;
+  }
+  /*===== PODRIA INTERESARTE =====*/
+
+  .podria-interesarte {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .podria-interesarte article {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 0px;
+  }
+
+  .podria-interesarte-img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 6px;
+  }
+
+  .podria-interesarte .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .podria-interesarte .títulosArtículos {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .podria-interesarte p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+  }
+  .cargarNoticias {
+    width: 75%;
+    height: 50px;
+    display: inline-block;
+    background: white; /* Rojo */
+    color: #d90429;
+    border-color: #d90429;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 50px;
+    font-size: 20px;
+  }
+}
